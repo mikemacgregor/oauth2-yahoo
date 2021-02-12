@@ -2,15 +2,18 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 use Hayageek\OAuth2\Client\Provider\Yahoo;
 
 // Replace these with your token settings
 // Create a project at https://developer.yahoo.com/apps
 
-$clientId = '<your_client_id>';
-$clientSecret = '<yout_client_secret>';
+$clientId = $_ENV['YAHOO_CLIENT_ID'];
+$clientSecret = $_ENV['YAHOO_CLIENT_SECRET'];
 // Change this if you are not using the built-in PHP server
-$redirectUri = 'http://myapp.com/index.php';
+$redirectUri = 'http://127.0.0.1/examples/user.php';
 
 // Start the session
 session_start();
