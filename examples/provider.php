@@ -13,7 +13,7 @@ use Hayageek\OAuth2\Client\Provider\Yahoo;
 $clientId = getenv('YAHOO_CLIENT_ID'); // $_ENV['YAHOO_CLIENT_ID'];
 $clientSecret = getenv('YAHOO_CLIENT_SECRET'); // $_ENV['YAHOO_CLIENT_SECRET'];
 // Change this if you are not using the built-in PHP server
-$redirectUri = 'http://oauth2-yahoo.herokuapp.com/examples/index.php';
+$redirectUri = 'https://oauth2-yahoo.herokuapp.com/examples/';
 
 // Start the session
 session_start();
